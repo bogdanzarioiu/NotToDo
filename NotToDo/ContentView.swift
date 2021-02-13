@@ -5,7 +5,9 @@
 //  Created by Bogdan on 2/13/21.
 //
 
+import Amplify
 import SwiftUI
+
 
 struct ContentView: View {
     @State private var notTodos = Array(0..<20).map { _ in UUID().uuidString }

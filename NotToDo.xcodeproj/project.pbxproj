@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		B5A0B3A025D870D700FA1974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A0B39F25D870D700FA1974 /* Assets.xcassets */; };
 		B5A0B3A325D870D700FA1974 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A0B3A225D870D700FA1974 /* Preview Assets.xcassets */; };
 		B5A0B3AC25D8743D00FA1974 /* NewNotToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0B3AB25D8743D00FA1974 /* NewNotToDoView.swift */; };
+		0B6126163A2B4EC5B34F3722 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DC5E4158AD6145938F442454 /* amplifyconfiguration.json */; };
+		3687E66C2BA94463BABB5A49 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DAC476384A5B43EFA5B689B6 /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		B5A0B3A425D870D700FA1974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5A0B3AB25D8743D00FA1974 /* NewNotToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNotToDoView.swift; sourceTree = "<group>"; };
 		F3EEF72B1F2016D6EFE85BE8 /* Pods_NotToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B227CE0127B4FD187921B14 /* amplifytools.xcconfig */ = {isa = PBXFileReference; name = "amplifytools.xcconfig"; path = "amplifytools.xcconfig"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.xcconfig; explicitFileType = undefined; includeInIndex = 0; };
+		DC5E4158AD6145938F442454 /* amplifyconfiguration.json */ = {isa = PBXFileReference; name = "amplifyconfiguration.json"; path = "amplifyconfiguration.json"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DAC476384A5B43EFA5B689B6 /* awsconfiguration.json */ = {isa = PBXFileReference; name = "awsconfiguration.json"; path = "awsconfiguration.json"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7C6C405CBD154CE68F1F7867 /* schema.graphql */ = {isa = PBXFileReference; name = "schema.graphql"; path = "amplify/backend/api/amplifyDatasource/schema.graphql"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,13 +60,13 @@
 				6C0C8B6C5C71D55FD777A514 /* Pods-NotToDo.debug.xcconfig */,
 				7774579B8477316C9C0D602C /* Pods-NotToDo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		B5A0B38F25D870D400FA1974 = {
 			isa = PBXGroup;
 			children = (
+				9065696D1F6B426EBBA1BAFD /* AmplifyConfig */,
 				B5A0B39A25D870D400FA1974 /* NotToDo */,
 				B5A0B39925D870D400FA1974 /* Products */,
 				6B4944DB74DAB206AB17F5CD /* Pods */,
@@ -95,6 +101,26 @@
 				B5A0B3A225D870D700FA1974 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9065696D1F6B426EBBA1BAFD /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				5B227CE0127B4FD187921B14 /* amplifytools.xcconfig */,
+				DC5E4158AD6145938F442454 /* amplifyconfiguration.json */,
+				DAC476384A5B43EFA5B689B6 /* awsconfiguration.json */,
+				7C6C405CBD154CE68F1F7867 /* schema.graphql */,
+			);
+			name = AmplifyConfig;
+			path = .;
+			sourceTree = "<group>";
+		};
+		34A28BD9161E4E1F99F7AE0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			path = undefined;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +184,8 @@
 			files = (
 				B5A0B3A325D870D700FA1974 /* Preview Assets.xcassets in Resources */,
 				B5A0B3A025D870D700FA1974 /* Assets.xcassets in Resources */,
+				0B6126163A2B4EC5B34F3722 /* amplifyconfiguration.json in Resources */,
+				3687E66C2BA94463BABB5A49 /* awsconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
