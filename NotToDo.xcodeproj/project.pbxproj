@@ -11,6 +11,7 @@
 		B5A0B39E25D870D400FA1974 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0B39D25D870D400FA1974 /* ContentView.swift */; };
 		B5A0B3A025D870D700FA1974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A0B39F25D870D700FA1974 /* Assets.xcassets */; };
 		B5A0B3A325D870D700FA1974 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A0B3A225D870D700FA1974 /* Preview Assets.xcassets */; };
+		B5A0B3AC25D8743D00FA1974 /* NewNotToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0B3AB25D8743D00FA1974 /* NewNotToDoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		B5A0B39F25D870D700FA1974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5A0B3A225D870D700FA1974 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5A0B3A425D870D700FA1974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5A0B3AB25D8743D00FA1974 /* NewNotToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNotToDoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				B5A0B39B25D870D400FA1974 /* NotToDoApp.swift */,
 				B5A0B39D25D870D400FA1974 /* ContentView.swift */,
+				B5A0B3AB25D8743D00FA1974 /* NewNotToDoView.swift */,
 				B5A0B39F25D870D700FA1974 /* Assets.xcassets */,
 				B5A0B3A425D870D700FA1974 /* Info.plist */,
 				B5A0B3A125D870D700FA1974 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5A0B39E25D870D400FA1974 /* ContentView.swift in Sources */,
+				B5A0B3AC25D8743D00FA1974 /* NewNotToDoView.swift in Sources */,
 				B5A0B39C25D870D400FA1974 /* NotToDoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
