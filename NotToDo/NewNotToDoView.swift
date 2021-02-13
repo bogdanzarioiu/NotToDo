@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct NewNotToDoView: View {
-    @State private var newNotToDo = "new not todo..."
+    @State private var newNotToDo = ""
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
@@ -19,6 +20,7 @@ struct NewNotToDoView: View {
             Spacer()
             Button(action: {
                 saveNotToDo()
+                presentationMode.wrappedValue.dismiss()
                 
             }, label: {
                 Text("Save")

@@ -17,12 +17,19 @@ struct ContentView: View {
                 VStack {
                     Text("Enter here the things not to do!")
                         .padding()
-                        .font(.system(size: 20, weight: .medium))
-                    List(notTodos, id: \.self) { todo in
-                        Text(todo)
+                        .font(.system(size: 20, weight: .heavy))
+                    List {
+                        ForEach(notTodos, id: \.self) { notToDo in
+                           Text(notToDo)
+                        }
+                        .onDelete(perform: deleteNotToDo(indexSet:))
+                        
+                        
                         
                     }
+
                     .listStyle(PlainListStyle())
+                    
                         
                 }
                 .navigationTitle("Not To Do")
@@ -35,20 +42,24 @@ struct ContentView: View {
                             self.showNewNotToDo.toggle()
                             
                         }, label: {
-                            Image(systemName: "plus")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                                .foregroundColor(.white)
+                            Text("+")
                                 .padding()
-                                .background(Color(.systemPurple))
+                                .foregroundColor(.white)
+                                .font(.system(size: 40, weight: .medium))
+                                .background(Color(.systemGreen))
                                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                        }).padding()
-                    }
+                        })
+                    }.padding()
                 }
             }
         }.sheet(isPresented: $showNewNotToDo, content: {
             NewNotToDoView()
         })
+    }
+    
+    func deleteNotToDo(indexSet: IndexSet) {
+        print("item deleted at: \(indexSet)")
+        
     }
 }
 
