@@ -15,9 +15,14 @@ struct NewNotToDoView: View {
     var body: some View {
         VStack {
             Text("Enter a new Not ToDo!")
-                .font(.system(size: 30, weight: .heavy))
-            TextEditor(text: $newNotToDo)
+                .padding(.top)
+                .font(.system(size: 25, weight: .heavy))
+            Text("This should be a thing you don't want to do")
+                .padding(.top, 5)
+                .font(.footnote)
                 .foregroundColor(Color(.systemGray))
+            TextEditor(text: $newNotToDo)
+                .foregroundColor(Color(.systemRed))
             Spacer()
             Button(action: {
                 saveNotToDo()
@@ -26,9 +31,9 @@ struct NewNotToDoView: View {
             }, label: {
                 Text("Save")
                     .foregroundColor(.white)
-                    .font(.title2)
+                    .font(.system(size: 20, weight: .bold))
                     .padding()
-                    .padding(.horizontal, 12)
+                    .padding(.horizontal, 30)
                     .background(Color(.systemGreen))
                     .cornerRadius(4)
             })
@@ -42,7 +47,7 @@ struct NewNotToDoView: View {
             switch result {
             case .success:
                 print("Saved New NotTODO")
-             
+                
             //maybe to show an alert here in case the data can't be saved
             case .failure:
                 print("Error while trying to save the new NotTODO")
