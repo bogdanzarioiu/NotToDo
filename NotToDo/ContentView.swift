@@ -111,6 +111,21 @@ struct ContentView: View {
     private func deleteNotToDo(indexSet: IndexSet) {
         print("item deleted at: \(indexSet)")
         
+        var latestNotTODOs = notTodos
+        latestNotTODOs.remove(atOffsets: indexSet)
+        guard let nTODO = Set(latestNotTODOs).symmetricDifference(notTodos).first else { return }
+        
+        //delete the data
+        Amplify.DataStore.delete(nTODO) { result in
+            switch result {
+            case .success:
+                print("Deleted.")
+            case .failure(let error):
+                print("Couldn't delete data from DataStore: \(error)")
+                
+            }
+        }
+        
     }
 }
 

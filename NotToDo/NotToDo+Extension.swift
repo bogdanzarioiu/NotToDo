@@ -18,3 +18,9 @@ extension NotToDo: Equatable {
         return lhs.id == rhs.id && lhs.body == rhs.body
     }
 }
+
+extension NotToDo: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id + body)
+    }
+}
