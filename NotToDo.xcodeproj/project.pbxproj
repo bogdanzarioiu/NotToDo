@@ -7,19 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B6126163A2B4EC5B34F3722 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DC5E4158AD6145938F442454 /* amplifyconfiguration.json */; };
 		19AC43ACA9E5415619F724CA /* Pods_NotToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EEF72B1F2016D6EFE85BE8 /* Pods_NotToDo.framework */; };
+		33CE4910D9E14E2EA19C3069 /* NotToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91583B1C2D43A4B6FF672E /* NotToDo.swift */; };
+		3687E66C2BA94463BABB5A49 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DAC476384A5B43EFA5B689B6 /* awsconfiguration.json */; };
+		3FD96F82F0874ECE99F54CCD /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CD481F9804504B6A541F7 /* AmplifyModels.swift */; };
+		B520391F25D896CD004762FB /* NotToDo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520391E25D896CD004762FB /* NotToDo+Extension.swift */; };
 		B5A0B39C25D870D400FA1974 /* NotToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0B39B25D870D400FA1974 /* NotToDoApp.swift */; };
 		B5A0B39E25D870D400FA1974 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0B39D25D870D400FA1974 /* ContentView.swift */; };
 		B5A0B3A025D870D700FA1974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A0B39F25D870D700FA1974 /* Assets.xcassets */; };
 		B5A0B3A325D870D700FA1974 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A0B3A225D870D700FA1974 /* Preview Assets.xcassets */; };
 		B5A0B3AC25D8743D00FA1974 /* NewNotToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0B3AB25D8743D00FA1974 /* NewNotToDoView.swift */; };
-		0B6126163A2B4EC5B34F3722 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DC5E4158AD6145938F442454 /* amplifyconfiguration.json */; };
-		3687E66C2BA94463BABB5A49 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DAC476384A5B43EFA5B689B6 /* awsconfiguration.json */; };
+		FBF6E7D3F0EF4F8B927B51BC /* NotToDo+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFDEFC2D62A493AAF1EA2A0 /* NotToDo+Schema.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B227CE0127B4FD187921B14 /* amplifytools.xcconfig */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.xcconfig; path = amplifytools.xcconfig; sourceTree = "<group>"; };
 		6C0C8B6C5C71D55FD777A514 /* Pods-NotToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotToDo.debug.xcconfig"; path = "Target Support Files/Pods-NotToDo/Pods-NotToDo.debug.xcconfig"; sourceTree = "<group>"; };
 		7774579B8477316C9C0D602C /* Pods-NotToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotToDo.release.xcconfig"; path = "Target Support Files/Pods-NotToDo/Pods-NotToDo.release.xcconfig"; sourceTree = "<group>"; };
+		7C6C405CBD154CE68F1F7867 /* schema.graphql */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text; name = schema.graphql; path = amplify/backend/api/amplifyDatasource/schema.graphql; sourceTree = "<group>"; };
+		8DFDEFC2D62A493AAF1EA2A0 /* NotToDo+Schema.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "NotToDo+Schema.swift"; path = "amplify/generated/models/NotToDo+Schema.swift"; sourceTree = "<group>"; };
+		AD91583B1C2D43A4B6FF672E /* NotToDo.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = NotToDo.swift; path = amplify/generated/models/NotToDo.swift; sourceTree = "<group>"; };
+		B520391E25D896CD004762FB /* NotToDo+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotToDo+Extension.swift"; sourceTree = "<group>"; };
 		B5A0B39825D870D400FA1974 /* NotToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A0B39B25D870D400FA1974 /* NotToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotToDoApp.swift; sourceTree = "<group>"; };
 		B5A0B39D25D870D400FA1974 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,11 +36,10 @@
 		B5A0B3A225D870D700FA1974 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5A0B3A425D870D700FA1974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5A0B3AB25D8743D00FA1974 /* NewNotToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNotToDoView.swift; sourceTree = "<group>"; };
+		DAC476384A5B43EFA5B689B6 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = awsconfiguration.json; sourceTree = "<group>"; };
+		DC5E4158AD6145938F442454 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		E94CD481F9804504B6A541F7 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		F3EEF72B1F2016D6EFE85BE8 /* Pods_NotToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B227CE0127B4FD187921B14 /* amplifytools.xcconfig */ = {isa = PBXFileReference; name = "amplifytools.xcconfig"; path = "amplifytools.xcconfig"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.xcconfig; explicitFileType = undefined; includeInIndex = 0; };
-		DC5E4158AD6145938F442454 /* amplifyconfiguration.json */ = {isa = PBXFileReference; name = "amplifyconfiguration.json"; path = "amplifyconfiguration.json"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DAC476384A5B43EFA5B689B6 /* awsconfiguration.json */ = {isa = PBXFileReference; name = "awsconfiguration.json"; path = "awsconfiguration.json"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7C6C405CBD154CE68F1F7867 /* schema.graphql */ = {isa = PBXFileReference; name = "schema.graphql"; path = "amplify/backend/api/amplifyDatasource/schema.graphql"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0712CB747EF441ABB8B36B37 /* AmplifyModels */ = {
+			isa = PBXGroup;
+			children = (
+				E94CD481F9804504B6A541F7 /* AmplifyModels.swift */,
+				AD91583B1C2D43A4B6FF672E /* NotToDo.swift */,
+				8DFDEFC2D62A493AAF1EA2A0 /* NotToDo+Schema.swift */,
+			);
+			name = AmplifyModels;
+			path = .;
+			sourceTree = "<group>";
+		};
 		38623249C18BAA2752C5F71F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,9 +82,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9065696D1F6B426EBBA1BAFD /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				5B227CE0127B4FD187921B14 /* amplifytools.xcconfig */,
+				DC5E4158AD6145938F442454 /* amplifyconfiguration.json */,
+				DAC476384A5B43EFA5B689B6 /* awsconfiguration.json */,
+				7C6C405CBD154CE68F1F7867 /* schema.graphql */,
+			);
+			name = AmplifyConfig;
+			path = .;
+			sourceTree = "<group>";
+		};
 		B5A0B38F25D870D400FA1974 = {
 			isa = PBXGroup;
 			children = (
+				0712CB747EF441ABB8B36B37 /* AmplifyModels */,
 				9065696D1F6B426EBBA1BAFD /* AmplifyConfig */,
 				B5A0B39A25D870D400FA1974 /* NotToDo */,
 				B5A0B39925D870D400FA1974 /* Products */,
@@ -87,6 +119,7 @@
 			children = (
 				B5A0B39B25D870D400FA1974 /* NotToDoApp.swift */,
 				B5A0B39D25D870D400FA1974 /* ContentView.swift */,
+				B520391E25D896CD004762FB /* NotToDo+Extension.swift */,
 				B5A0B3AB25D8743D00FA1974 /* NewNotToDoView.swift */,
 				B5A0B39F25D870D700FA1974 /* Assets.xcassets */,
 				B5A0B3A425D870D700FA1974 /* Info.plist */,
@@ -101,26 +134,6 @@
 				B5A0B3A225D870D700FA1974 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		9065696D1F6B426EBBA1BAFD /* AmplifyConfig */ = {
-			isa = PBXGroup;
-			children = (
-				5B227CE0127B4FD187921B14 /* amplifytools.xcconfig */,
-				DC5E4158AD6145938F442454 /* amplifyconfiguration.json */,
-				DAC476384A5B43EFA5B689B6 /* awsconfiguration.json */,
-				7C6C405CBD154CE68F1F7867 /* schema.graphql */,
-			);
-			name = AmplifyConfig;
-			path = .;
-			sourceTree = "<group>";
-		};
-		34A28BD9161E4E1F99F7AE0C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			path = undefined;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B520391F25D896CD004762FB /* NotToDo+Extension.swift in Sources */,
 				B5A0B39E25D870D400FA1974 /* ContentView.swift in Sources */,
 				B5A0B3AC25D8743D00FA1974 /* NewNotToDoView.swift in Sources */,
 				B5A0B39C25D870D400FA1974 /* NotToDoApp.swift in Sources */,
+				3FD96F82F0874ECE99F54CCD /* AmplifyModels.swift in Sources */,
+				33CE4910D9E14E2EA19C3069 /* NotToDo.swift in Sources */,
+				FBF6E7D3F0EF4F8B927B51BC /* NotToDo+Schema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -353,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

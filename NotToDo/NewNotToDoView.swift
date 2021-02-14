@@ -5,6 +5,7 @@
 //  Created by Bogdan on 2/13/21.
 //
 
+import Amplify
 import SwiftUI
 
 struct NewNotToDoView: View {
@@ -36,6 +37,18 @@ struct NewNotToDoView: View {
     
     func saveNotToDo() {
         print(newNotToDo)
+        let notTODO = NotToDo(body: newNotToDo)
+        Amplify.DataStore.save(notTODO) { result in
+            switch result {
+            case .success:
+                print("Saved New NotTODO")
+             
+            //maybe to show an alert here in case the data can't be saved
+            case .failure:
+                print("Error while trying to save the new NotTODO")
+                
+            }
+        }
     }
 }
 

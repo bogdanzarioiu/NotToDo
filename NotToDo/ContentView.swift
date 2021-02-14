@@ -6,12 +6,15 @@
 //
 
 import Amplify
+import Combine
 import SwiftUI
 
 
 struct ContentView: View {
-    @State private var notTodos = Array(0..<20).map { _ in UUID().uuidString }
+    //@State private var notTodos = Array(0..<20).map { _ in UUID().uuidString }
+    @State private var notTodos = [NotToDo]()
     @State private var showNewNotToDo = false
+    @State var observer: AnyCancellable?
     
     var body: some View {
         NavigationView {
@@ -21,18 +24,18 @@ struct ContentView: View {
                         .padding()
                         .font(.system(size: 20, weight: .heavy))
                     List {
-                        ForEach(notTodos, id: \.self) { notToDo in
-                           Text(notToDo)
+                        ForEach(notTodos) { notToDo in
+                            Text(notToDo.body)
                         }
                         .onDelete(perform: deleteNotToDo(indexSet:))
                         
                         
                         
                     }
-
+                    
                     .listStyle(PlainListStyle())
                     
-                        
+                    
                 }
                 .navigationTitle("Not To Do")
                 
@@ -54,12 +57,58 @@ struct ContentView: View {
                     }.padding()
                 }
             }
-        }.sheet(isPresented: $showNewNotToDo, content: {
+        }
+        .onAppear {
+            getNotToDos()
+            observeNotToDos()
+        }
+        .sheet(isPresented: $showNewNotToDo, content: {
             NewNotToDoView()
         })
     }
     
-    func deleteNotToDo(indexSet: IndexSet) {
+    //load the data from the device when the app launches
+    private func getNotToDos() {
+        Amplify.DataStore.query(NotToDo.self) { result in
+            switch result {
+            case .success(let notToDos):
+                print("successfully got the data.")
+                self.notTodos = notToDos
+            case .failure(let error):
+                print("error while getting the Not ToDos: \(error)")
+            }
+            
+        }
+        
+    }
+    //observe changes in data and react accordingly
+    private func observeNotToDos() {
+     observer = Amplify.DataStore.publisher(for: NotToDo.self).sink { completion in
+            switch completion {
+            //TODO: - Implement error handling
+            case .failure(let error):
+                print(error)
+            case .finished:
+                print("Finished.")
+                
+            }
+        } receiveValue: { change in
+            guard let notTODO = try? change.decodeModel(as: NotToDo.self) else { return }
+            switch change.mutationType {
+            case "create":
+                self.notTodos.append(notTODO)
+            case "delete":
+                if let index = self.notTodos.firstIndex(of: notTODO) {
+                    self.notTodos.remove(at: index)
+                }
+            default:
+                break
+            }
+        }
+
+        
+    }
+    private func deleteNotToDo(indexSet: IndexSet) {
         print("item deleted at: \(indexSet)")
         
     }
