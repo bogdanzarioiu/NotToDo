@@ -14,6 +14,7 @@ struct NewNotToDoView: View {
     
     var body: some View {
         VStack {
+            Image(systemName: "chevron.compact.down")
             Text("Enter a new Not ToDo!")
                 .padding(.top)
                 .font(.system(size: 25, weight: .heavy))
