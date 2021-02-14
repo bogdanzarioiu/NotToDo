@@ -47,12 +47,18 @@ struct ContentView: View {
                             self.showNewNotToDo.toggle()
                             
                         }, label: {
-                            Text("+")
-                                .padding()
-                                .foregroundColor(.white)
-                                .font(.system(size: 40, weight: .medium))
-                                .background(Color(.systemGreen))
-                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                            Image(systemName: "plus.circle.fill")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                //.padding()
+                                .foregroundColor(.green)
+                                //.background(Color(.systemGreen))
+//                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+//                                .overlay(
+//                                    Circle()
+//                                        .stroke(Color.green)
+//
+//                                )
                         })
                     }.padding()
                 }
